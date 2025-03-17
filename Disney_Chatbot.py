@@ -11,6 +11,14 @@ import tempfile
 if sys.version_info >= (3, 11):
     asyncio.set_event_loop_policy(asyncio.DefaultEventLoopPolicy())
 
+import spacy
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    from spacy.cli import download
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
 # Load environment variables
 load_dotenv()
 
