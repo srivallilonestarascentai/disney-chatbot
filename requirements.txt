@@ -1,5 +1,5 @@
 streamlit==1.43.2
-from openai import OpenAI
+openai==1.66.3
 python-dotenv==1.0.0
 spacy==3.5.0
 spacy==3.5.0
